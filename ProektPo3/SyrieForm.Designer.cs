@@ -57,9 +57,9 @@
             this.naimenovanie_materialaTextBox = new System.Windows.Forms.TextBox();
             this.countTextBox = new System.Windows.Forms.TextBox();
             this.sumTextBox = new System.Windows.Forms.TextBox();
-            this.edinica_izmereniaComboBox = new System.Windows.Forms.ComboBox();
             this.edinicaizmereniaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.edinica_izmereniaTableAdapter = new ProektPo3.MebelDataSetTableAdapters.Edinica_izmereniaTableAdapter();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             iDLabel = new System.Windows.Forms.Label();
             naimenovanie_materialaLabel = new System.Windows.Forms.Label();
             edinica_izmereniaLabel = new System.Windows.Forms.Label();
@@ -313,19 +313,6 @@
             this.sumTextBox.Size = new System.Drawing.Size(200, 20);
             this.sumTextBox.TabIndex = 16;
             // 
-            // edinica_izmereniaComboBox
-            // 
-            this.edinica_izmereniaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.syrieBindingSource, "Edinica_izmerenia", true));
-            this.edinica_izmereniaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.syrieBindingSource, "Edinica_izmerenia", true));
-            this.edinica_izmereniaComboBox.DataSource = this.edinicaizmereniaBindingSource;
-            this.edinica_izmereniaComboBox.DisplayMember = "Naimenovanie";
-            this.edinica_izmereniaComboBox.FormattingEnabled = true;
-            this.edinica_izmereniaComboBox.Location = new System.Drawing.Point(403, 194);
-            this.edinica_izmereniaComboBox.Name = "edinica_izmereniaComboBox";
-            this.edinica_izmereniaComboBox.Size = new System.Drawing.Size(200, 21);
-            this.edinica_izmereniaComboBox.TabIndex = 17;
-            this.edinica_izmereniaComboBox.ValueMember = "ID";
-            // 
             // edinicaizmereniaBindingSource
             // 
             this.edinicaizmereniaBindingSource.DataMember = "Edinica_izmerenia";
@@ -335,12 +322,24 @@
             // 
             this.edinica_izmereniaTableAdapter.ClearBeforeFill = true;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.syrieBindingSource, "Edinica_izmerenia", true));
+            this.comboBox1.DataSource = this.edinicaizmereniaBindingSource;
+            this.comboBox1.DisplayMember = "Naimenovanie";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(403, 194);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(200, 21);
+            this.comboBox1.TabIndex = 18;
+            this.comboBox1.ValueMember = "ID";
+            // 
             // SyrieForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 458);
-            this.Controls.Add(this.edinica_izmereniaComboBox);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(iDLabel);
             this.Controls.Add(this.iDTextBox);
             this.Controls.Add(naimenovanie_materialaLabel);
@@ -390,8 +389,8 @@
         private System.Windows.Forms.TextBox naimenovanie_materialaTextBox;
         private System.Windows.Forms.TextBox countTextBox;
         private System.Windows.Forms.TextBox sumTextBox;
-        private System.Windows.Forms.ComboBox edinica_izmereniaComboBox;
         private System.Windows.Forms.BindingSource edinicaizmereniaBindingSource;
         private MebelDataSetTableAdapters.Edinica_izmereniaTableAdapter edinica_izmereniaTableAdapter;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

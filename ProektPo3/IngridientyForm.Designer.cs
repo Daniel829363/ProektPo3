@@ -54,13 +54,13 @@
             this.ingridientyBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.iDTextBox = new System.Windows.Forms.TextBox();
             this.countTextBox = new System.Windows.Forms.TextBox();
-            this.podukciaComboBox = new System.Windows.Forms.ComboBox();
-            this.syrieComboBox = new System.Windows.Forms.ComboBox();
             this.gotovoeprodukciBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gotovoe_produkciTableAdapter = new ProektPo3.MebelDataSetTableAdapters.Gotovoe_produkciTableAdapter();
-            this.mebelDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.syrieBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mebelDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gotovoe_produkciTableAdapter = new ProektPo3.MebelDataSetTableAdapters.Gotovoe_produkciTableAdapter();
             this.syrieTableAdapter = new ProektPo3.MebelDataSetTableAdapters.SyrieTableAdapter();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             iDLabel = new System.Windows.Forms.Label();
             podukciaLabel = new System.Windows.Forms.Label();
             syrieLabel = new System.Windows.Forms.Label();
@@ -70,8 +70,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ingridientyBindingNavigator)).BeginInit();
             this.ingridientyBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gotovoeprodukciBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mebelDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.syrieBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mebelDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // iDLabel
@@ -231,6 +231,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -278,7 +279,7 @@
             this.iDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ingridientyBindingSource, "ID", true));
             this.iDTextBox.Location = new System.Drawing.Point(364, 129);
             this.iDTextBox.Name = "iDTextBox";
-            this.iDTextBox.Size = new System.Drawing.Size(143, 20);
+            this.iDTextBox.Size = new System.Drawing.Size(164, 20);
             this.iDTextBox.TabIndex = 8;
             // 
             // countTextBox
@@ -286,65 +287,63 @@
             this.countTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ingridientyBindingSource, "Count", true));
             this.countTextBox.Location = new System.Drawing.Point(364, 207);
             this.countTextBox.Name = "countTextBox";
-            this.countTextBox.Size = new System.Drawing.Size(143, 20);
+            this.countTextBox.Size = new System.Drawing.Size(164, 20);
             this.countTextBox.TabIndex = 14;
-            // 
-            // podukciaComboBox
-            // 
-            this.podukciaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ingridientyBindingSource, "Podukcia", true));
-            this.podukciaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.ingridientyBindingSource, "Podukcia", true));
-            this.podukciaComboBox.DataSource = this.gotovoeprodukciBindingSource;
-            this.podukciaComboBox.DisplayMember = "Naimenovanie";
-            this.podukciaComboBox.FormattingEnabled = true;
-            this.podukciaComboBox.Location = new System.Drawing.Point(364, 155);
-            this.podukciaComboBox.Name = "podukciaComboBox";
-            this.podukciaComboBox.Size = new System.Drawing.Size(143, 21);
-            this.podukciaComboBox.TabIndex = 15;
-            this.podukciaComboBox.ValueMember = "ID";
-            // 
-            // syrieComboBox
-            // 
-            this.syrieComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ingridientyBindingSource, "Syrie", true));
-            this.syrieComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.ingridientyBindingSource, "Syrie", true));
-            this.syrieComboBox.DataSource = this.syrieBindingSource;
-            this.syrieComboBox.DisplayMember = "Naimenovanie_materiala";
-            this.syrieComboBox.FormattingEnabled = true;
-            this.syrieComboBox.Location = new System.Drawing.Point(364, 181);
-            this.syrieComboBox.Name = "syrieComboBox";
-            this.syrieComboBox.Size = new System.Drawing.Size(143, 21);
-            this.syrieComboBox.TabIndex = 16;
-            this.syrieComboBox.ValueMember = "ID";
             // 
             // gotovoeprodukciBindingSource
             // 
             this.gotovoeprodukciBindingSource.DataMember = "Gotovoe_produkci";
             this.gotovoeprodukciBindingSource.DataSource = this.mebelDataSet;
             // 
-            // gotovoe_produkciTableAdapter
+            // syrieBindingSource
             // 
-            this.gotovoe_produkciTableAdapter.ClearBeforeFill = true;
+            this.syrieBindingSource.DataMember = "Syrie";
+            this.syrieBindingSource.DataSource = this.mebelDataSetBindingSource;
             // 
             // mebelDataSetBindingSource
             // 
             this.mebelDataSetBindingSource.DataSource = this.mebelDataSet;
             this.mebelDataSetBindingSource.Position = 0;
             // 
-            // syrieBindingSource
+            // gotovoe_produkciTableAdapter
             // 
-            this.syrieBindingSource.DataMember = "Syrie";
-            this.syrieBindingSource.DataSource = this.mebelDataSetBindingSource;
+            this.gotovoe_produkciTableAdapter.ClearBeforeFill = true;
             // 
             // syrieTableAdapter
             // 
             this.syrieTableAdapter.ClearBeforeFill = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.ingridientyBindingSource, "Podukcia", true));
+            this.comboBox1.DataSource = this.gotovoeprodukciBindingSource;
+            this.comboBox1.DisplayMember = "Naimenovanie";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(364, 155);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(164, 21);
+            this.comboBox1.TabIndex = 18;
+            this.comboBox1.ValueMember = "ID";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.ingridientyBindingSource, "Syrie", true));
+            this.comboBox2.DataSource = this.syrieBindingSource;
+            this.comboBox2.DisplayMember = "Naimenovanie_materiala";
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(364, 181);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(164, 21);
+            this.comboBox2.TabIndex = 19;
+            this.comboBox2.ValueMember = "ID";
             // 
             // IngridientyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.syrieComboBox);
-            this.Controls.Add(this.podukciaComboBox);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(iDLabel);
             this.Controls.Add(this.iDTextBox);
             this.Controls.Add(podukciaLabel);
@@ -362,8 +361,8 @@
             this.ingridientyBindingNavigator.ResumeLayout(false);
             this.ingridientyBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gotovoeprodukciBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mebelDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.syrieBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mebelDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -391,12 +390,12 @@
         private System.Windows.Forms.ToolStripButton ingridientyBindingNavigatorSaveItem;
         private System.Windows.Forms.TextBox iDTextBox;
         private System.Windows.Forms.TextBox countTextBox;
-        private System.Windows.Forms.ComboBox podukciaComboBox;
-        private System.Windows.Forms.ComboBox syrieComboBox;
         private System.Windows.Forms.BindingSource gotovoeprodukciBindingSource;
         private MebelDataSetTableAdapters.Gotovoe_produkciTableAdapter gotovoe_produkciTableAdapter;
         private System.Windows.Forms.BindingSource mebelDataSetBindingSource;
         private System.Windows.Forms.BindingSource syrieBindingSource;
         private MebelDataSetTableAdapters.SyrieTableAdapter syrieTableAdapter;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }

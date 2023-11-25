@@ -57,10 +57,11 @@
             this.naimenovanieTextBox = new System.Windows.Forms.TextBox();
             this.countTextBox = new System.Windows.Forms.TextBox();
             this.sumTextBox = new System.Windows.Forms.TextBox();
-            this.edinica_izmereniaComboBox = new System.Windows.Forms.ComboBox();
             this.edinicaizmereniaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.edinica_izmereniaTableAdapter = new ProektPo3.MebelDataSetTableAdapters.Edinica_izmereniaTableAdapter();
             this.edinica_izmereniaTableAdapter1 = new ProektPo3.MebelDataSetTableAdapters.Edinica_izmereniaTableAdapter();
+            this.budjetTableAdapter1 = new ProektPo3.MebelDataSetTableAdapters.BudjetTableAdapter();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             iDLabel = new System.Windows.Forms.Label();
             naimenovanieLabel = new System.Windows.Forms.Label();
             edinica_izmereniaLabel = new System.Windows.Forms.Label();
@@ -239,6 +240,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -313,19 +315,6 @@
             this.sumTextBox.Size = new System.Drawing.Size(165, 20);
             this.sumTextBox.TabIndex = 16;
             // 
-            // edinica_izmereniaComboBox
-            // 
-            this.edinica_izmereniaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gotovoe_produkciBindingSource, "Edinica_izmerenia", true));
-            this.edinica_izmereniaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.gotovoe_produkciBindingSource, "Edinica_izmerenia", true));
-            this.edinica_izmereniaComboBox.DataSource = this.edinicaizmereniaBindingSource;
-            this.edinica_izmereniaComboBox.DisplayMember = "Naimenovanie";
-            this.edinica_izmereniaComboBox.FormattingEnabled = true;
-            this.edinica_izmereniaComboBox.Location = new System.Drawing.Point(384, 182);
-            this.edinica_izmereniaComboBox.Name = "edinica_izmereniaComboBox";
-            this.edinica_izmereniaComboBox.Size = new System.Drawing.Size(166, 21);
-            this.edinica_izmereniaComboBox.TabIndex = 17;
-            this.edinica_izmereniaComboBox.ValueMember = "ID";
-            // 
             // edinicaizmereniaBindingSource
             // 
             this.edinicaizmereniaBindingSource.DataMember = "Edinica_izmerenia";
@@ -339,12 +328,28 @@
             // 
             this.edinica_izmereniaTableAdapter1.ClearBeforeFill = true;
             // 
+            // budjetTableAdapter1
+            // 
+            this.budjetTableAdapter1.ClearBeforeFill = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.gotovoe_produkciBindingSource, "Edinica_izmerenia", true));
+            this.comboBox1.DataSource = this.edinicaizmereniaBindingSource;
+            this.comboBox1.DisplayMember = "Naimenovanie";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(386, 181);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(164, 21);
+            this.comboBox1.TabIndex = 17;
+            this.comboBox1.ValueMember = "ID";
+            // 
             // GotovoeProdukciForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.edinica_izmereniaComboBox);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(iDLabel);
             this.Controls.Add(this.iDTextBox);
             this.Controls.Add(naimenovanieLabel);
@@ -394,9 +399,10 @@
         private System.Windows.Forms.TextBox naimenovanieTextBox;
         private System.Windows.Forms.TextBox countTextBox;
         private System.Windows.Forms.TextBox sumTextBox;
-        private System.Windows.Forms.ComboBox edinica_izmereniaComboBox;
         private System.Windows.Forms.BindingSource edinicaizmereniaBindingSource;
         private MebelDataSetTableAdapters.Edinica_izmereniaTableAdapter edinica_izmereniaTableAdapter;
         private MebelDataSetTableAdapters.Edinica_izmereniaTableAdapter edinica_izmereniaTableAdapter1;
+        private MebelDataSetTableAdapters.BudjetTableAdapter budjetTableAdapter1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

@@ -29,6 +29,8 @@ namespace ProektPo3
         BudjetForm budjetForm = new BudjetForm();
         private void ZakupkaSyriaForm_Load(object sender, EventArgs e)
         {
+            
+            
             textBox1.Text = budjetForm.Budjetsum();
             // TODO: данная строка кода позволяет загрузить данные в таблицу "mebelDataSet.Syrie". При необходимости она может быть перемещена или удалена.
             this.syrieTableAdapter.Fill(this.mebelDataSet.Syrie);
@@ -53,6 +55,32 @@ namespace ProektPo3
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
             dataDateTimePicker.Value = DateTime.Now;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Report newForm = new Report(dateTimePicker1.Value, dateTimePicker2.Value, "..\\..\\Zakupka.rdlc",1);
+            newForm.Show();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

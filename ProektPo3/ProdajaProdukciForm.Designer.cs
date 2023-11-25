@@ -36,6 +36,9 @@
             System.Windows.Forms.Label dataLabel;
             System.Windows.Forms.Label employeeLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProdajaProdukciForm));
+            System.Windows.Forms.Label label3;
+            System.Windows.Forms.Label label2;
+            System.Windows.Forms.Label llll;
             this.backtoform2 = new System.Windows.Forms.Button();
             this.mebelDataSet = new ProektPo3.MebelDataSet();
             this.prodaja_produkciBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -58,19 +61,25 @@
             this.countTextBox = new System.Windows.Forms.TextBox();
             this.sumTextBox = new System.Windows.Forms.TextBox();
             this.dataDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.produkciaComboBox = new System.Windows.Forms.ComboBox();
             this.gotovoeprodukciBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gotovoe_produkciTableAdapter = new ProektPo3.MebelDataSetTableAdapters.Gotovoe_produkciTableAdapter();
-            this.employeeComboBox = new System.Windows.Forms.ComboBox();
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.employeeTableAdapter = new ProektPo3.MebelDataSetTableAdapters.EmployeeTableAdapter();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             iDLabel = new System.Windows.Forms.Label();
             produkciaLabel = new System.Windows.Forms.Label();
             countLabel = new System.Windows.Forms.Label();
             sumLabel = new System.Windows.Forms.Label();
             dataLabel = new System.Windows.Forms.Label();
             employeeLabel = new System.Windows.Forms.Label();
+            label3 = new System.Windows.Forms.Label();
+            label2 = new System.Windows.Forms.Label();
+            llll = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.mebelDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prodaja_produkciBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prodaja_produkciBindingNavigator)).BeginInit();
@@ -82,7 +91,7 @@
             // iDLabel
             // 
             iDLabel.AutoSize = true;
-            iDLabel.Location = new System.Drawing.Point(17, 114);
+            iDLabel.Location = new System.Drawing.Point(16, 134);
             iDLabel.Name = "iDLabel";
             iDLabel.Size = new System.Drawing.Size(21, 13);
             iDLabel.TabIndex = 7;
@@ -91,7 +100,7 @@
             // produkciaLabel
             // 
             produkciaLabel.AutoSize = true;
-            produkciaLabel.Location = new System.Drawing.Point(17, 140);
+            produkciaLabel.Location = new System.Drawing.Point(16, 160);
             produkciaLabel.Name = "produkciaLabel";
             produkciaLabel.Size = new System.Drawing.Size(58, 13);
             produkciaLabel.TabIndex = 9;
@@ -100,7 +109,7 @@
             // countLabel
             // 
             countLabel.AutoSize = true;
-            countLabel.Location = new System.Drawing.Point(17, 166);
+            countLabel.Location = new System.Drawing.Point(16, 186);
             countLabel.Name = "countLabel";
             countLabel.Size = new System.Drawing.Size(38, 13);
             countLabel.TabIndex = 11;
@@ -109,7 +118,7 @@
             // sumLabel
             // 
             sumLabel.AutoSize = true;
-            sumLabel.Location = new System.Drawing.Point(17, 192);
+            sumLabel.Location = new System.Drawing.Point(16, 212);
             sumLabel.Name = "sumLabel";
             sumLabel.Size = new System.Drawing.Size(31, 13);
             sumLabel.TabIndex = 13;
@@ -118,7 +127,7 @@
             // dataLabel
             // 
             dataLabel.AutoSize = true;
-            dataLabel.Location = new System.Drawing.Point(17, 219);
+            dataLabel.Location = new System.Drawing.Point(16, 239);
             dataLabel.Name = "dataLabel";
             dataLabel.Size = new System.Drawing.Size(33, 13);
             dataLabel.TabIndex = 15;
@@ -127,7 +136,7 @@
             // employeeLabel
             // 
             employeeLabel.AutoSize = true;
-            employeeLabel.Location = new System.Drawing.Point(17, 244);
+            employeeLabel.Location = new System.Drawing.Point(16, 264);
             employeeLabel.Name = "employeeLabel";
             employeeLabel.Size = new System.Drawing.Size(56, 13);
             employeeLabel.TabIndex = 17;
@@ -254,6 +263,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -300,7 +310,7 @@
             // 
             this.iDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.prodaja_produkciBindingSource, "ID", true));
             this.iDTextBox.Enabled = false;
-            this.iDTextBox.Location = new System.Drawing.Point(81, 111);
+            this.iDTextBox.Location = new System.Drawing.Point(80, 131);
             this.iDTextBox.Name = "iDTextBox";
             this.iDTextBox.Size = new System.Drawing.Size(200, 20);
             this.iDTextBox.TabIndex = 8;
@@ -308,7 +318,7 @@
             // countTextBox
             // 
             this.countTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.prodaja_produkciBindingSource, "Count", true));
-            this.countTextBox.Location = new System.Drawing.Point(81, 163);
+            this.countTextBox.Location = new System.Drawing.Point(80, 183);
             this.countTextBox.Name = "countTextBox";
             this.countTextBox.Size = new System.Drawing.Size(200, 20);
             this.countTextBox.TabIndex = 12;
@@ -316,7 +326,7 @@
             // sumTextBox
             // 
             this.sumTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.prodaja_produkciBindingSource, "Sum", true));
-            this.sumTextBox.Location = new System.Drawing.Point(81, 189);
+            this.sumTextBox.Location = new System.Drawing.Point(80, 209);
             this.sumTextBox.Name = "sumTextBox";
             this.sumTextBox.Size = new System.Drawing.Size(200, 20);
             this.sumTextBox.TabIndex = 14;
@@ -324,24 +334,10 @@
             // dataDateTimePicker
             // 
             this.dataDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.prodaja_produkciBindingSource, "Data", true));
-            this.dataDateTimePicker.Location = new System.Drawing.Point(81, 215);
+            this.dataDateTimePicker.Location = new System.Drawing.Point(80, 235);
             this.dataDateTimePicker.Name = "dataDateTimePicker";
             this.dataDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.dataDateTimePicker.TabIndex = 16;
-            // 
-            // produkciaComboBox
-            // 
-            this.produkciaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.prodaja_produkciBindingSource, "Produkcia", true));
-            this.produkciaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.prodaja_produkciBindingSource, "Produkcia", true));
-            this.produkciaComboBox.DataSource = this.gotovoeprodukciBindingSource;
-            this.produkciaComboBox.DisplayMember = "Naimenovanie";
-            this.produkciaComboBox.FormattingEnabled = true;
-            this.produkciaComboBox.Location = new System.Drawing.Point(81, 136);
-            this.produkciaComboBox.Name = "produkciaComboBox";
-            this.produkciaComboBox.Size = new System.Drawing.Size(200, 21);
-            this.produkciaComboBox.TabIndex = 19;
-            this.produkciaComboBox.ValueMember = "ID";
-            this.produkciaComboBox.SelectedIndexChanged += new System.EventHandler(this.produkciaComboBox_SelectedIndexChanged);
             // 
             // gotovoeprodukciBindingSource
             // 
@@ -351,19 +347,6 @@
             // gotovoe_produkciTableAdapter
             // 
             this.gotovoe_produkciTableAdapter.ClearBeforeFill = true;
-            // 
-            // employeeComboBox
-            // 
-            this.employeeComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.prodaja_produkciBindingSource, "Employee", true));
-            this.employeeComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.prodaja_produkciBindingSource, "Employee", true));
-            this.employeeComboBox.DataSource = this.employeeBindingSource;
-            this.employeeComboBox.DisplayMember = "FIO";
-            this.employeeComboBox.FormattingEnabled = true;
-            this.employeeComboBox.Location = new System.Drawing.Point(79, 241);
-            this.employeeComboBox.Name = "employeeComboBox";
-            this.employeeComboBox.Size = new System.Drawing.Size(202, 21);
-            this.employeeComboBox.TabIndex = 20;
-            this.employeeComboBox.ValueMember = "ID";
             // 
             // employeeBindingSource
             // 
@@ -377,19 +360,102 @@
             // textBox1
             // 
             this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.prodaja_produkciBindingSource, "Count", true));
-            this.textBox1.Location = new System.Drawing.Point(302, 136);
+            this.textBox1.Location = new System.Drawing.Point(390, 158);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 20);
+            this.textBox1.Size = new System.Drawing.Size(126, 20);
             this.textBox1.TabIndex = 21;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new System.Drawing.Point(16, 64);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(41, 13);
+            label3.TabIndex = 31;
+            label3.Text = "Конец:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(16, 38);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(47, 13);
+            label2.TabIndex = 30;
+            label2.Text = "Начало:";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(275, 38);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(113, 46);
+            this.button1.TabIndex = 29;
+            this.button1.Text = "Показать отчёт";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(69, 64);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker2.TabIndex = 28;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(69, 38);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 27;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.prodaja_produkciBindingSource, "Produkcia", true));
+            this.comboBox1.DataSource = this.gotovoeprodukciBindingSource;
+            this.comboBox1.DisplayMember = "Naimenovanie";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(80, 157);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(200, 21);
+            this.comboBox1.TabIndex = 32;
+            this.comboBox1.ValueMember = "ID";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.prodaja_produkciBindingSource, "Employee", true));
+            this.comboBox2.DataSource = this.employeeBindingSource;
+            this.comboBox2.DisplayMember = "FIO";
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(80, 264);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(200, 21);
+            this.comboBox2.TabIndex = 33;
+            this.comboBox2.ValueMember = "ID";
+            // 
+            // llll
+            // 
+            llll.AutoSize = true;
+            llll.Location = new System.Drawing.Point(296, 160);
+            llll.Name = "llll";
+            llll.Size = new System.Drawing.Size(44, 13);
+            llll.TabIndex = 34;
+            llll.Text = "Кол-во ";
+            llll.Click += new System.EventHandler(this.llll_Click);
             // 
             // ProdajaProdukciForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 458);
+            this.Controls.Add(llll);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(label3);
+            this.Controls.Add(label2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.employeeComboBox);
-            this.Controls.Add(this.produkciaComboBox);
             this.Controls.Add(iDLabel);
             this.Controls.Add(this.iDTextBox);
             this.Controls.Add(produkciaLabel);
@@ -441,12 +507,15 @@
         private System.Windows.Forms.TextBox countTextBox;
         private System.Windows.Forms.TextBox sumTextBox;
         private System.Windows.Forms.DateTimePicker dataDateTimePicker;
-        private System.Windows.Forms.ComboBox produkciaComboBox;
         private System.Windows.Forms.BindingSource gotovoeprodukciBindingSource;
         private MebelDataSetTableAdapters.Gotovoe_produkciTableAdapter gotovoe_produkciTableAdapter;
-        private System.Windows.Forms.ComboBox employeeComboBox;
         private System.Windows.Forms.BindingSource employeeBindingSource;
         private MebelDataSetTableAdapters.EmployeeTableAdapter employeeTableAdapter;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }

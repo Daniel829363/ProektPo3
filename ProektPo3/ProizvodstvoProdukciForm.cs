@@ -48,5 +48,11 @@ namespace ProektPo3
             newForm.Show();
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Report newForm = new Report(dateTimePicker1.Value, dateTimePicker2.Value, "..\\..\\Proiz.rdlc", 3);
+            newForm.Show();
+        }
     }
 }

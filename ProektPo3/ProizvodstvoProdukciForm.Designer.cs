@@ -35,6 +35,8 @@
             System.Windows.Forms.Label dataLabel;
             System.Windows.Forms.Label employeeLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProizvodstvoProdukciForm));
+            System.Windows.Forms.Label label3;
+            System.Windows.Forms.Label label2;
             this.backtoform2 = new System.Windows.Forms.Button();
             this.mebelDataSet = new ProektPo3.MebelDataSet();
             this.proizvodstvo_produkciBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -56,17 +58,22 @@
             this.iDTextBox = new System.Windows.Forms.TextBox();
             this.countTextBox = new System.Windows.Forms.TextBox();
             this.dataDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.produkciComboBox = new System.Windows.Forms.ComboBox();
             this.gotovoeprodukciBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gotovoe_produkciTableAdapter = new ProektPo3.MebelDataSetTableAdapters.Gotovoe_produkciTableAdapter();
-            this.employeeComboBox = new System.Windows.Forms.ComboBox();
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.employeeTableAdapter = new ProektPo3.MebelDataSetTableAdapters.EmployeeTableAdapter();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             iDLabel = new System.Windows.Forms.Label();
             produkciLabel = new System.Windows.Forms.Label();
             countLabel = new System.Windows.Forms.Label();
             dataLabel = new System.Windows.Forms.Label();
             employeeLabel = new System.Windows.Forms.Label();
+            label3 = new System.Windows.Forms.Label();
+            label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.mebelDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proizvodstvo_produkciBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proizvodstvo_produkciBindingNavigator)).BeginInit();
@@ -241,6 +248,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -307,19 +315,6 @@
             this.dataDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.dataDateTimePicker.TabIndex = 14;
             // 
-            // produkciComboBox
-            // 
-            this.produkciComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proizvodstvo_produkciBindingSource, "Produkci", true));
-            this.produkciComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.proizvodstvo_produkciBindingSource, "Produkci", true));
-            this.produkciComboBox.DataSource = this.gotovoeprodukciBindingSource;
-            this.produkciComboBox.DisplayMember = "Naimenovanie";
-            this.produkciComboBox.FormattingEnabled = true;
-            this.produkciComboBox.Location = new System.Drawing.Point(337, 166);
-            this.produkciComboBox.Name = "produkciComboBox";
-            this.produkciComboBox.Size = new System.Drawing.Size(200, 21);
-            this.produkciComboBox.TabIndex = 16;
-            this.produkciComboBox.ValueMember = "ID";
-            // 
             // gotovoeprodukciBindingSource
             // 
             this.gotovoeprodukciBindingSource.DataMember = "Gotovoe_produkci";
@@ -328,19 +323,6 @@
             // gotovoe_produkciTableAdapter
             // 
             this.gotovoe_produkciTableAdapter.ClearBeforeFill = true;
-            // 
-            // employeeComboBox
-            // 
-            this.employeeComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proizvodstvo_produkciBindingSource, "Employee", true));
-            this.employeeComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.proizvodstvo_produkciBindingSource, "Employee", true));
-            this.employeeComboBox.DataSource = this.employeeBindingSource;
-            this.employeeComboBox.DisplayMember = "FIO";
-            this.employeeComboBox.FormattingEnabled = true;
-            this.employeeComboBox.Location = new System.Drawing.Point(337, 245);
-            this.employeeComboBox.Name = "employeeComboBox";
-            this.employeeComboBox.Size = new System.Drawing.Size(200, 21);
-            this.employeeComboBox.TabIndex = 17;
-            this.employeeComboBox.ValueMember = "ID";
             // 
             // employeeBindingSource
             // 
@@ -351,13 +333,84 @@
             // 
             this.employeeTableAdapter.ClearBeforeFill = true;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new System.Drawing.Point(8, 70);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(41, 13);
+            label3.TabIndex = 36;
+            label3.Text = "Конец:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(8, 44);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(47, 13);
+            label2.TabIndex = 35;
+            label2.Text = "Начало:";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(267, 44);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(113, 46);
+            this.button1.TabIndex = 34;
+            this.button1.Text = "Показать отчёт";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(61, 70);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker2.TabIndex = 33;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(61, 44);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 32;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.proizvodstvo_produkciBindingSource, "Produkci", true));
+            this.comboBox1.DataSource = this.gotovoeprodukciBindingSource;
+            this.comboBox1.DisplayMember = "Naimenovanie";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(337, 166);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(200, 21);
+            this.comboBox1.TabIndex = 37;
+            this.comboBox1.ValueMember = "ID";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.proizvodstvo_produkciBindingSource, "Employee", true));
+            this.comboBox2.DataSource = this.employeeBindingSource;
+            this.comboBox2.DisplayMember = "FIO";
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(337, 245);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(200, 21);
+            this.comboBox2.TabIndex = 38;
+            this.comboBox2.ValueMember = "ID";
+            // 
             // ProizvodstvoProdukciForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 458);
-            this.Controls.Add(this.employeeComboBox);
-            this.Controls.Add(this.produkciComboBox);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(label3);
+            this.Controls.Add(label2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(iDLabel);
             this.Controls.Add(this.iDTextBox);
             this.Controls.Add(produkciLabel);
@@ -406,11 +459,14 @@
         private System.Windows.Forms.TextBox iDTextBox;
         private System.Windows.Forms.TextBox countTextBox;
         private System.Windows.Forms.DateTimePicker dataDateTimePicker;
-        private System.Windows.Forms.ComboBox produkciComboBox;
         private System.Windows.Forms.BindingSource gotovoeprodukciBindingSource;
         private MebelDataSetTableAdapters.Gotovoe_produkciTableAdapter gotovoe_produkciTableAdapter;
-        private System.Windows.Forms.ComboBox employeeComboBox;
         private System.Windows.Forms.BindingSource employeeBindingSource;
         private MebelDataSetTableAdapters.EmployeeTableAdapter employeeTableAdapter;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }

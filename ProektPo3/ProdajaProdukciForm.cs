@@ -70,7 +70,7 @@ namespace ProektPo3
             this.gotovoe_produkciTableAdapter.Fill(this.mebelDataSet.Gotovoe_produkci);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "mebelDataSet.Prodaja_produkci". При необходимости она может быть перемещена или удалена.
             this.prodaja_produkciTableAdapter.Fill(this.mebelDataSet.Prodaja_produkci);
-
+            
         }
 
         private void backtoform2_Click(object sender, EventArgs e)
@@ -84,12 +84,27 @@ namespace ProektPo3
             this.Close();
         }
 
-        private void produkciaComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        
+
+        private void button1_Click(object sender, EventArgs e)
         {
-            if(produkciaComboBox.SelectedValue!=null)
+            Report newForm = new Report(dateTimePicker1.Value, dateTimePicker2.Value, "..\\..\\Prodaj.rdlc", 2);
+            newForm.Show();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            if (comboBox1.SelectedValue != null)
             {
-                textBox1.Text = retCountGP(produkciaComboBox.SelectedValue.ToString());
+                textBox1.Text = retCountGP(comboBox1.SelectedValue.ToString());
+                
             }
+        }
+
+        private void llll_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

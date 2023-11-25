@@ -35,6 +35,8 @@
             System.Windows.Forms.Label sumLabel;
             System.Windows.Forms.Label dataLabel;
             System.Windows.Forms.Label employeeLabel;
+            System.Windows.Forms.Label label2;
+            System.Windows.Forms.Label label3;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ZakupkaSyriaForm));
             this.backtoform2 = new System.Windows.Forms.Button();
             this.mebelDataSet = new ProektPo3.MebelDataSet();
@@ -58,20 +60,25 @@
             this.countTextBox = new System.Windows.Forms.TextBox();
             this.sumTextBox = new System.Windows.Forms.TextBox();
             this.dataDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.employeeTableAdapter = new ProektPo3.MebelDataSetTableAdapters.EmployeeTableAdapter();
-            this.syrieComboBox = new System.Windows.Forms.ComboBox();
             this.syrieBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.syrieTableAdapter = new ProektPo3.MebelDataSetTableAdapters.SyrieTableAdapter();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.button1 = new System.Windows.Forms.Button();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             iDLabel = new System.Windows.Forms.Label();
             syrieLabel = new System.Windows.Forms.Label();
             countLabel = new System.Windows.Forms.Label();
             sumLabel = new System.Windows.Forms.Label();
             dataLabel = new System.Windows.Forms.Label();
             employeeLabel = new System.Windows.Forms.Label();
+            label2 = new System.Windows.Forms.Label();
+            label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.mebelDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zakupka_syriaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zakupka_syriaBindingNavigator)).BeginInit();
@@ -83,7 +90,7 @@
             // iDLabel
             // 
             iDLabel.AutoSize = true;
-            iDLabel.Location = new System.Drawing.Point(241, 143);
+            iDLabel.Location = new System.Drawing.Point(30, 130);
             iDLabel.Name = "iDLabel";
             iDLabel.Size = new System.Drawing.Size(21, 13);
             iDLabel.TabIndex = 7;
@@ -92,7 +99,7 @@
             // syrieLabel
             // 
             syrieLabel.AutoSize = true;
-            syrieLabel.Location = new System.Drawing.Point(241, 169);
+            syrieLabel.Location = new System.Drawing.Point(30, 156);
             syrieLabel.Name = "syrieLabel";
             syrieLabel.Size = new System.Drawing.Size(33, 13);
             syrieLabel.TabIndex = 9;
@@ -101,7 +108,7 @@
             // countLabel
             // 
             countLabel.AutoSize = true;
-            countLabel.Location = new System.Drawing.Point(241, 195);
+            countLabel.Location = new System.Drawing.Point(30, 182);
             countLabel.Name = "countLabel";
             countLabel.Size = new System.Drawing.Size(38, 13);
             countLabel.TabIndex = 11;
@@ -110,7 +117,7 @@
             // sumLabel
             // 
             sumLabel.AutoSize = true;
-            sumLabel.Location = new System.Drawing.Point(241, 221);
+            sumLabel.Location = new System.Drawing.Point(30, 208);
             sumLabel.Name = "sumLabel";
             sumLabel.Size = new System.Drawing.Size(31, 13);
             sumLabel.TabIndex = 13;
@@ -119,7 +126,7 @@
             // dataLabel
             // 
             dataLabel.AutoSize = true;
-            dataLabel.Location = new System.Drawing.Point(241, 248);
+            dataLabel.Location = new System.Drawing.Point(30, 235);
             dataLabel.Name = "dataLabel";
             dataLabel.Size = new System.Drawing.Size(33, 13);
             dataLabel.TabIndex = 15;
@@ -128,15 +135,35 @@
             // employeeLabel
             // 
             employeeLabel.AutoSize = true;
-            employeeLabel.Location = new System.Drawing.Point(241, 273);
+            employeeLabel.Location = new System.Drawing.Point(30, 260);
             employeeLabel.Name = "employeeLabel";
             employeeLabel.Size = new System.Drawing.Size(56, 13);
             employeeLabel.TabIndex = 17;
             employeeLabel.Text = "Employee:";
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(15, 44);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(47, 13);
+            label2.TabIndex = 25;
+            label2.Text = "Начало:";
+            label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new System.Drawing.Point(15, 70);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(41, 13);
+            label3.TabIndex = 26;
+            label3.Text = "Конец:";
+            label3.Click += new System.EventHandler(this.label3_Click);
+            // 
             // backtoform2
             // 
-            this.backtoform2.Location = new System.Drawing.Point(303, 378);
+            this.backtoform2.Location = new System.Drawing.Point(194, 348);
             this.backtoform2.Name = "backtoform2";
             this.backtoform2.Size = new System.Drawing.Size(193, 60);
             this.backtoform2.TabIndex = 6;
@@ -302,7 +329,7 @@
             // iDTextBox
             // 
             this.iDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.zakupka_syriaBindingSource, "ID", true));
-            this.iDTextBox.Location = new System.Drawing.Point(303, 140);
+            this.iDTextBox.Location = new System.Drawing.Point(92, 127);
             this.iDTextBox.Name = "iDTextBox";
             this.iDTextBox.Size = new System.Drawing.Size(200, 20);
             this.iDTextBox.TabIndex = 8;
@@ -310,7 +337,7 @@
             // countTextBox
             // 
             this.countTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.zakupka_syriaBindingSource, "Count", true));
-            this.countTextBox.Location = new System.Drawing.Point(303, 192);
+            this.countTextBox.Location = new System.Drawing.Point(92, 179);
             this.countTextBox.Name = "countTextBox";
             this.countTextBox.Size = new System.Drawing.Size(200, 20);
             this.countTextBox.TabIndex = 12;
@@ -318,7 +345,7 @@
             // sumTextBox
             // 
             this.sumTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.zakupka_syriaBindingSource, "Sum", true));
-            this.sumTextBox.Location = new System.Drawing.Point(303, 218);
+            this.sumTextBox.Location = new System.Drawing.Point(92, 205);
             this.sumTextBox.Name = "sumTextBox";
             this.sumTextBox.Size = new System.Drawing.Size(200, 20);
             this.sumTextBox.TabIndex = 14;
@@ -326,22 +353,10 @@
             // dataDateTimePicker
             // 
             this.dataDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.zakupka_syriaBindingSource, "Data", true));
-            this.dataDateTimePicker.Location = new System.Drawing.Point(303, 244);
+            this.dataDateTimePicker.Location = new System.Drawing.Point(92, 231);
             this.dataDateTimePicker.Name = "dataDateTimePicker";
             this.dataDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.dataDateTimePicker.TabIndex = 16;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.zakupka_syriaBindingSource, "Employee", true));
-            this.comboBox1.DataSource = this.employeeBindingSource;
-            this.comboBox1.DisplayMember = "FIO";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(304, 271);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(199, 21);
-            this.comboBox1.TabIndex = 18;
-            this.comboBox1.ValueMember = "ID";
             // 
             // employeeBindingSource
             // 
@@ -351,19 +366,6 @@
             // employeeTableAdapter
             // 
             this.employeeTableAdapter.ClearBeforeFill = true;
-            // 
-            // syrieComboBox
-            // 
-            this.syrieComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.zakupka_syriaBindingSource, "Syrie", true));
-            this.syrieComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.zakupka_syriaBindingSource, "Syrie", true));
-            this.syrieComboBox.DataSource = this.syrieBindingSource;
-            this.syrieComboBox.DisplayMember = "Naimenovanie_materiala";
-            this.syrieComboBox.FormattingEnabled = true;
-            this.syrieComboBox.Location = new System.Drawing.Point(303, 165);
-            this.syrieComboBox.Name = "syrieComboBox";
-            this.syrieComboBox.Size = new System.Drawing.Size(200, 21);
-            this.syrieComboBox.TabIndex = 19;
-            this.syrieComboBox.ValueMember = "ID";
             // 
             // syrieBindingSource
             // 
@@ -377,7 +379,7 @@
             // textBox1
             // 
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(602, 41);
+            this.textBox1.Location = new System.Drawing.Point(643, 5);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(145, 20);
             this.textBox1.TabIndex = 20;
@@ -385,21 +387,76 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(559, 44);
+            this.label1.Location = new System.Drawing.Point(600, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(37, 13);
             this.label1.TabIndex = 21;
             this.label1.Text = "Budjet";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(68, 44);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 22;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(68, 70);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker2.TabIndex = 23;
+            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(274, 44);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(113, 46);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "Показать отчёт";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.zakupka_syriaBindingSource, "Syrie", true));
+            this.comboBox2.DataSource = this.syrieBindingSource;
+            this.comboBox2.DisplayMember = "Naimenovanie_materiala";
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(92, 152);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(200, 21);
+            this.comboBox2.TabIndex = 27;
+            this.comboBox2.ValueMember = "ID";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.zakupka_syriaBindingSource, "Employee", true));
+            this.comboBox1.DataSource = this.employeeBindingSource;
+            this.comboBox1.DisplayMember = "FIO";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(92, 257);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(200, 21);
+            this.comboBox1.TabIndex = 28;
+            this.comboBox1.ValueMember = "ID";
             // 
             // ZakupkaSyriaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 458);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(label3);
+            this.Controls.Add(label2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.syrieComboBox);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(iDLabel);
             this.Controls.Add(this.iDTextBox);
             this.Controls.Add(syrieLabel);
@@ -451,13 +508,16 @@
         private System.Windows.Forms.TextBox countTextBox;
         private System.Windows.Forms.TextBox sumTextBox;
         private System.Windows.Forms.DateTimePicker dataDateTimePicker;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.BindingSource employeeBindingSource;
         private MebelDataSetTableAdapters.EmployeeTableAdapter employeeTableAdapter;
-        private System.Windows.Forms.ComboBox syrieComboBox;
         private System.Windows.Forms.BindingSource syrieBindingSource;
         private MebelDataSetTableAdapters.SyrieTableAdapter syrieTableAdapter;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

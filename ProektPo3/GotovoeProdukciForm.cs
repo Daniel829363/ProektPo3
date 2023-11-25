@@ -34,6 +34,7 @@ namespace ProektPo3
             // TODO: данная строка кода позволяет загрузить данные в таблицу "mebelDataSet.Gotovoe_produkci". При необходимости она может быть перемещена или удалена.
             this.gotovoe_produkciTableAdapter.Fill(this.mebelDataSet.Gotovoe_produkci);
 
+            //this.reportViewer1.RefreshReport();
         }
 
         private void backtoform2_Click(object sender, EventArgs e)
